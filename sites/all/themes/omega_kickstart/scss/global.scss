@@ -1766,9 +1766,24 @@ div.messages.commerce-add-to-cart-confirmation {
     }
     .field-name-commerce-price {
         font-family: $headerfont;
-        font-size: 30px;
+        font-size: 20px;
         font-weight: 700;
         margin-bottom: 20px;
+    }
+    .form-item-attributes-product-select {
+        display: none;
+    }
+    .vocabulary-rozmery-jednotlivych-dilu-obrazu {
+        h2 {
+            display: none; 
+        }
+        .content {
+            margin-bottom: 10px;
+            padding: 0 10px;
+            .taxonomy-term-description {
+                margin: 5px 0;
+            }
+        }
     }
     .cloud-zoom-container {
         margin-bottom: 20px;
