@@ -15,6 +15,8 @@ function commerce_kickstart_lite_product_migrate_api() {
     'migrations' => array(
       'CommerceKickstartProduct' => array('class_name' => 'CommerceKickstartProduct'),
       'CommerceKickstartNode' => array('class_name' => 'CommerceKickstartNode'),
+      'CommerceKickstartObrazyVarianty' => array('class_name' => 'CommerceKickstartObrazyVarianty'),
+      'CommerceKickstartObrazyNodes' => array('class_name' => 'CommerceKickstartObrazyNodes'),
     ),
   );
 }
