@@ -41,7 +41,7 @@ function commerce_kickstart_taxonomy_preprocess_views_view(&$vars) {
       $vars['collection_title'] = $term->name;
       $vars['collection_image_url'] = NULL;
       if (!empty($term->field_image) && !empty($term->field_image[LANGUAGE_NONE][0]['uri'])) {
-        $vars['collection_image_url'] = file_create_url($term->field_image[LANGUAGE_NONE][0]['uri']);
+        $vars['collection_image_url'] = image_style_url('category_image', $term->field_image[LANGUAGE_NONE][0]['uri']);
       }
     }
   }
