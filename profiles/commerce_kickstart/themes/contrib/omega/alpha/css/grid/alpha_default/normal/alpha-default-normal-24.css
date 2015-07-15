@@ -9,7 +9,7 @@
 .grid-20, .grid-21, .grid-22, .grid-23, .grid-24 {
   display: inline;
   float: left;
-  position: relative;
+  /* position: relative; */
   margin-left: 10px;
   margin-right: 10px;
 }
