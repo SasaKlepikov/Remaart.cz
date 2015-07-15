@@ -73,7 +73,7 @@ class MigrateSourceCSV extends MigrateSource {
     $this->options = $options;
     $this->fields = $fields;
     // fgetcsv specific options
-    foreach (array('length' => NULL, 'delimiter' => ',', 'enclosure' => '"', 'escape' => '\\') as $key => $default) {
+    foreach (array('length' => NULL, 'delimiter' => ';', 'enclosure' => '"', 'escape' => '\\') as $key => $default) {
       $this->fgetcsv[$key] = isset($options[$key]) ? $options[$key] : $default;
     }
     // One can either pass in an explicit list of column names to use, or if we have
