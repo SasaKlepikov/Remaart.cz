@@ -4,7 +4,6 @@
  * @file
  *  Migrations for commerce_kickstart_lite_product.
  */
-
 class CommerceKickstartProduct extends CommerceKickstartMigration {
 
   public function __construct() {
@@ -12,15 +11,13 @@ class CommerceKickstartProduct extends CommerceKickstartMigration {
     $this->description = t('Import products.');
 
     // Create a map object for tracking the relationships between source rows
-    $this->map = new MigrateSQLMap($this->machineName,
-      array(
-        'sku' => array(
-          'type' => 'varchar',
-          'length' => 32,
-          'not null' => TRUE,
-        ),
+    $this->map = new MigrateSQLMap($this->machineName, array(
+      'sku' => array(
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
       ),
-      MigrateDestinationEntityAPI::getKeySchema('commerce_product', 'product')
+        ), MigrateDestinationEntityAPI::getKeySchema('commerce_product', 'product')
     );
 
     // Create a MigrateSource object.
@@ -35,9 +32,9 @@ class CommerceKickstartProduct extends CommerceKickstartMigration {
     // Images
     $this->addFieldMapping('field_images', 'product_images');
     $this->addFieldMapping('field_images:file_replace')
-      ->defaultValue(FILE_EXISTS_REPLACE);
+        ->defaultValue(FILE_EXISTS_REPLACE);
     $this->addFieldMapping('field_images:source_dir')
-      ->defaultValue(drupal_get_path('module', 'commerce_kickstart_lite_product') . '/import/images');
+        ->defaultValue(drupal_get_path('module', 'commerce_kickstart_lite_product') . '/import/images');
 
     $this->addFieldMapping('uid', 'uid');
     $this->addFieldMapping('language', 'language');
@@ -63,6 +60,7 @@ class CommerceKickstartProduct extends CommerceKickstartMigration {
     $row->uid = 1;
     $row->language = LANGUAGE_NONE;
   }
+
 }
 
 class CommerceKickstartNode extends CommerceKickstartMigration {
@@ -76,15 +74,13 @@ class CommerceKickstartNode extends CommerceKickstartMigration {
     );
 
     // Create a map object for tracking the relationships between source rows
-    $this->map = new MigrateSQLMap($this->machineName,
-      array(
-        'title' => array(
-          'type' => 'varchar',
-          'length' => 255,
-          'not null' => TRUE,
-        ),
+    $this->map = new MigrateSQLMap($this->machineName, array(
+      'title' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
       ),
-      MigrateDestinationNode::getKeySchema()
+        ), MigrateDestinationNode::getKeySchema()
     );
 
     // Create a MigrateSource object.
@@ -99,7 +95,7 @@ class CommerceKickstartNode extends CommerceKickstartMigration {
     $this->addFieldMapping('body:summary', 'excerpt');
     $this->addFieldMapping('field_product_category', 'category');
     $this->addFieldMapping('field_product_category:create_term')
-      ->defaultValue(TRUE);
+        ->defaultValue(TRUE);
     $this->addFieldMapping('field_product', 'skus');
   }
 
@@ -119,6 +115,7 @@ class CommerceKickstartNode extends CommerceKickstartMigration {
     $columns[3] = array('sku', 'SKU');
     return $columns;
   }
+
 }
 
 class CommerceKickstartObrazyVarianty extends CommerceKickstartMigration {
@@ -128,15 +125,13 @@ class CommerceKickstartObrazyVarianty extends CommerceKickstartMigration {
     $this->description = t('Import variant obrazů.');
 
     // Create a map object for tracking the relationships between source rows
-    $this->map = new MigrateSQLMap($this->machineName,
-      array(
-        'sku' => array(
-          'type' => 'varchar',
-          'length' => 32,
-          'not null' => TRUE,
-        ),
+    $this->map = new MigrateSQLMap($this->machineName, array(
+      'sku' => array(
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
       ),
-      MigrateDestinationEntityAPI::getKeySchema('commerce_product', 'obraz')
+        ), MigrateDestinationEntityAPI::getKeySchema('commerce_product', 'obraz')
     );
 
     // Create a MigrateSource object.
@@ -151,9 +146,9 @@ class CommerceKickstartObrazyVarianty extends CommerceKickstartMigration {
     // Images
     $this->addFieldMapping('field_images', 'product_images');
     $this->addFieldMapping('field_images:file_replace')
-      ->defaultValue(FILE_EXISTS_REPLACE);
+        ->defaultValue(FILE_EXISTS_REPLACE);
     $this->addFieldMapping('field_images:source_dir')
-      ->defaultValue(drupal_get_path('module', 'commerce_kickstart_lite_product') . '/import/images');
+        ->defaultValue(drupal_get_path('module', 'commerce_kickstart_lite_product') . '/import/images');
 
     $this->addFieldMapping('uid', 'uid');
     $this->addFieldMapping('field_typ_obrazu', 'typ_obrazu');
@@ -199,6 +194,7 @@ class CommerceKickstartObrazyVarianty extends CommerceKickstartMigration {
     $row->language = LANGUAGE_NONE;
     $row->tagy = explode(', ', $row->tags);
   }
+
 }
 
 class CommerceKickstartObrazyNodes extends CommerceKickstartMigration {
@@ -207,20 +203,14 @@ class CommerceKickstartObrazyNodes extends CommerceKickstartMigration {
     parent::__construct();
     $this->description = t('Import stránek (nodes) s obrazy.');
 
-    $this->dependencies = array(
-      'CommerceKickstartObrazyVarianty',
-    );
-
     // Create a map object for tracking the relationships between source rows
-    $this->map = new MigrateSQLMap($this->machineName,
-      array(
-        'title' => array(
-          'type' => 'varchar',
-          'length' => 255,
-          'not null' => TRUE,
-        ),
+    $this->map = new MigrateSQLMap($this->machineName, array(
+      'node_id' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
       ),
-      MigrateDestinationNode::getKeySchema('obraz')
+        ), MigrateDestinationNode::getKeySchema()
     );
 
     // Create a MigrateSource object.
@@ -231,10 +221,10 @@ class CommerceKickstartObrazyNodes extends CommerceKickstartMigration {
     $this->addFieldMapping('uid', 'uid')->defaultValue(1);
 
     $this->addFieldMapping('title', 'title');
-    $this->addFieldMapping('body', 'description');
-    $this->addFieldMapping('body:summary', 'excerpt');
     $this->addFieldMapping('field_product_category', 'category');
     $this->addFieldMapping('field_product', 'skus');
+    $this->addFieldMapping('language', 'language')->defaultValue('cs');
+    $this->addFieldMapping('node_id', 'node_id');
   }
 
   public function prepareRow($row) {
@@ -247,10 +237,11 @@ class CommerceKickstartObrazyNodes extends CommerceKickstartMigration {
   }
 
   function csvcolumns() {
-    $columns[0] = array('title', 'Title');
-    $columns[1] = array('description', 'Description');
+    $columns[0] = array('node_id', 'NodeID');
+    $columns[1] = array('title', 'Title');
     $columns[2] = array('category', 'Category');
     $columns[3] = array('sku', 'SKU');
     return $columns;
   }
+
 }
