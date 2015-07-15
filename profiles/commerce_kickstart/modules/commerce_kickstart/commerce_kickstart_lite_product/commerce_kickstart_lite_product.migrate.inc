@@ -138,30 +138,33 @@ class CommerceKickstartObrazyVarianty extends CommerceKickstartMigration {
     $this->source = new MigrateSourceCSV(drupal_get_path('module', 'commerce_kickstart_lite_product') . '/import/obrazy-varianty.csv', $this->csvcolumns(), array('header_rows' => 1), $this->fields());
 
     $this->destination = new MigrateDestinationEntityAPI('commerce_product', 'obraz');
-
+    
+    $this->addFieldMapping('uid', 'uid')->defaultValue(1);
+    $this->addFieldMapping('language', 'language')->defaultValue('cs');
     $this->addFieldMapping('title', 'title');
     $this->addFieldMapping('sku', 'sku');
     $this->addFieldMapping('commerce_price', 'price');
-
-    // Images
     $this->addFieldMapping('field_images', 'product_images');
     $this->addFieldMapping('field_images:file_replace')
         ->defaultValue(FILE_EXISTS_REPLACE);
     $this->addFieldMapping('field_images:source_dir')
         ->defaultValue(drupal_get_path('module', 'commerce_kickstart_lite_product') . '/import/images');
-
-    $this->addFieldMapping('uid', 'uid');
     $this->addFieldMapping('field_typ_obrazu', 'typ_obrazu');
     $this->addFieldMapping('field_bezna_cena', 'bezna_cena');
     $this->addFieldMapping('field_doba_dodani', 'doba_dodani');
     $this->addFieldMapping('field_rozmery_obrazu', 'rozmery_obrazu');
-    $this->addFieldMapping('language', 'language');
-    $this->addFieldMapping('field_s_hodinami', 'hodiny');
+    $this->addFieldMapping('field_rozmery_obrazu:create_term')
+        ->defaultValue(TRUE);
     $this->addFieldMapping('field_umisteni_hodin', 'umisteni');
-    $this->addFieldMapping('field_tagy', 'tagy');
     $this->addFieldMapping('field_description', 'popis');
     $this->addFieldMapping('field_description:summary', 'excerpt');
-    $this->addFieldMapping('commerce_stock', 'sklad');
+    $this->addFieldMapping('field_tagy', 'tagy');
+    $this->addFieldMapping('field_tagy:create_term')
+        ->defaultValue(TRUE);
+    $this->addFieldMapping('field_rozmery_dilu_obrazu', 'dily');
+    $this->addFieldMapping('field_rozmery_dilu_obrazu:create_term')
+        ->defaultValue(TRUE);
+    $this->addFieldMapping('field_s_hodinami', 'hodiny');
   }
 
   function csvcolumns() {
@@ -173,12 +176,11 @@ class CommerceKickstartObrazyVarianty extends CommerceKickstartMigration {
     $columns[5] = array('bezna_cena', 'Standardni cena');
     $columns[6] = array('doba_dodani', 'Doba dodani');
     $columns[7] = array('rozmery_obrazu', 'Rozmery obrazu');
-    $columns[8] = array('language', 'Jazyk');
-    $columns[9] = array('umisteni', 'Umisteni');
-    $columns[10] = array('sklad', 'Sklad');
-    $columns[11] = array('popis', 'Description');
-    $columns[12] = array('tags', 'Tagy');
-    $columns[13] = array('hodiny', 'Hodiny');
+    $columns[8] = array('umisteni', 'Umisteni');
+    $columns[9] = array('popis', 'Description');
+    $columns[10] = array('tags', 'Tagy');
+    $columns[11] = array('dily', 'Rozmery dilu');
+    $columns[12] = array('hodiny', 'Hodiny');
     return $columns;
   }
 
@@ -190,8 +192,6 @@ class CommerceKickstartObrazyVarianty extends CommerceKickstartMigration {
 
   function prepareRow($row) {
     $row->product_images = explode(', ', $row->images);
-    $row->uid = 1;
-    $row->language = LANGUAGE_NONE;
     $row->tagy = explode(', ', $row->tags);
   }
 
