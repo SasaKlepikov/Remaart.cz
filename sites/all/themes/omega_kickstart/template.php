@@ -37,7 +37,7 @@ function omega_kickstart_css_alter(&$css) {
       if (!isset($item['basename']) || strpos($key, '-rtl.css') !== FALSE) {
         continue;
       }
-      $css[$key]['basename'] = 'RTL::' .  $item['basename'];
+      $css[$key]['basename'] = 'RTL::' . $item['basename'];
     }
   }
 }
@@ -60,5 +60,19 @@ function omega_kickstart_preprocess_node(&$variables) {
   $variables['submitted'] = $variables['date'] . ' - ' . $variables['name'];
   if ($variables['type'] == 'blog_post') {
     $variables['submitted'] = t('By') . ' ' . $variables['name'] . ', ' . $variables['date'];
+  }
+}
+
+function omega_kickstart_preprocess_views_view_list(&$vars) {
+  foreach ($vars['rows'] as $id => &$row) {
+    // If it's 3th item -> add class
+    if ($id % 2 == 0):
+      $vars['classes_array'][$id] .= $vars['classes_array'][$id] . " views-row-third";
+    endif;
+    
+    // If it's 4th item -> add class
+    if ($id % 3 == 0):
+      $vars['classes_array'][$id] .= $vars['classes_array'][$id] . " views-row-fourth";
+    endif;
   }
 }

@@ -1,0 +1,122 @@
+.section-content {
+    label {
+        line-height: 24px;
+        font-family: 'Open Sans', sans-serif !important;
+    }
+    textarea, select, 
+    input[type="date"], 
+    input[type="datetime"], 
+    input[type="datetime-local"], 
+    input[type="email"], 
+    input[type="month"], 
+    input[type="number"], 
+    input[type="password"], 
+    input[type="search"], 
+    input[type="tel"], 
+    input[type="text"], 
+    input[type="time"], 
+    input[type="url"], 
+    input[type="week"] {
+        width: 100%;
+        height: 30px !important;
+        @media (max-width: 480px) {
+            width: 100% !important;
+            min-width: inherit;
+        }
+    }
+}
+.page-user form#user-register-form .form-actions, 
+.page-user form#user-profile-form .form-actions, 
+.page-checkout form#user-register-form .form-actions, 
+.page-checkout form#user-profile-form .form-actions {
+    width: auto !important;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px !important;
+}
+.page-user #user-register-form .form-submit, 
+.page-user #user-profile-form .form-submit, 
+.page-user #user_login_form .form-submit, 
+.page-user #user_pass_form .form-submit, 
+.page-checkout #user-register-form .form-submit, 
+.page-checkout #user-profile-form .form-submit, 
+.page-checkout #user_login_form .form-submit, 
+.page-checkout #user_pass_form .form-submit,
+.page-user a.login-register, 
+.page-user a.login-account, 
+.page-checkout a.login-register, 
+.page-checkout a.login-account {
+    background: #207cca !important;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #2698f2), color-stop(1, #207cca)) !important;
+    background: -moz-linear-gradient(top center, #2698f2 0%, #207cca 100%) !important;
+    -moz-border-radius: 4px !important;
+    -webkit-border-radius: 4px !important;
+    -khtml-border-radius: 4px !important;
+    border-radius: 4px !important;
+    color: white !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    margin-left: 0px !important;
+    padding: 15px 20px !important;
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: normal !important;
+}
+.page-user form#user-pass .back-to-login, 
+.page-checkout form#user-pass .back-to-login {
+    padding-top: 0px !important;
+}
+
+.page-user form#user-register-form .form-item-pass .password-parent .password-strength, 
+.page-user form#user-profile-form .form-item-pass .password-parent .password-strength, 
+.page-checkout form#user-register-form .form-item-pass .password-parent .password-strength, 
+.page-checkout form#user-profile-form .form-item-pass .password-parent .password-strength {
+    width: 100% !important;
+    box-sizing: border-box;
+    right: inherit !important;
+    bottom: 0px !important;
+    position: relative !important;
+}
+.page-user form#user-register-form .form-item-pass, 
+.page-user form#user-profile-form .form-item-pass, 
+.page-checkout form#user-register-form .form-item-pass, 
+.page-checkout form#user-profile-form .form-item-pass {
+    margin-bottom: 1em !important;
+}
+.page-user form#user-register-form .form-item-pass .password-parent, 
+.page-user form#user-profile-form .form-item-pass .password-parent, 
+.page-checkout form#user-register-form .form-item-pass .password-parent, 
+.page-checkout form#user-profile-form .form-item-pass .password-parent,
+.page-user form#user-register-form .form-item-pass .confirm-parent, 
+.page-user form#user-profile-form .form-item-pass .confirm-parent, 
+.page-checkout form#user-register-form .form-item-pass .confirm-parent, 
+.page-checkout form#user-profile-form .form-item-pass .confirm-parent, 
+.page-user form#user-register-form .form-item-pass .confirm-parent, 
+.page-user form#user-profile-form .form-item-pass .confirm-parent, 
+.page-checkout form#user-register-form .form-item-pass .confirm-parent, 
+.page-checkout form#user-profile-form .form-item-pass .confirm-parent {
+    width: 100% !important;
+} 
+.page-user form#user-login .create-account, 
+.page-checkout form#user-login .create-account {
+    float: right !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    @media (max-width: 740px) {
+        float: none !important;
+    }
+}
+#user_login_form {
+    width: 50% !important;
+    @media (max-width: 740px) {
+        width: auto !important;
+    }
+}
+#user_register_form,
+#user_pass_form {
+    width: auto !important;
+    float: none !important;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}

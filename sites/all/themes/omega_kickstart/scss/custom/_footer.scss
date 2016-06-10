@@ -1,0 +1,132 @@
+#section-footer {
+    #zone-footer-wrapper {
+        background-color: #cccccc;
+        #region-footer-first,
+        #region-footer-second,
+        #region-footer-third {
+            .block-inner {
+                text-align: center;
+                h2 {
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    padding-bottom: 0;
+                    text-align: center;
+                    padding-left: 0;
+                }
+                ul.menu {
+                    text-align: left;
+                    display: inline-block;
+                    padding-right: 0;
+                    width: auto;
+                    border: 1px solid #999;
+                    background-color: #eee;
+                    overflow: hidden;
+                    li {
+                        margin-top: 0;
+                        margin-bottom: 0;
+                        padding-right: 0;
+                        display: inline-block;
+                        a {
+                            display: block;
+                            color: #888888;
+                            text-transform: capitalize;
+                            background-color: #eee;
+                            font-family: "Open Sans", sans-serif;
+                            font-weight: 600;
+                            height: auto;
+                            padding: 12px 16px;
+                            text-decoration: none;
+                            &:hover,
+                                &.active {
+                                background-color: #fff;
+                            }
+                        }
+                    }
+                    @media (max-width: 640px) {
+                        width: 80%;
+                        padding: 3px 3px 0;
+                        border: none;
+                        background-color: #666;
+                        li {
+                            margin-bottom: 3px;
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+        #region-footer-third {
+            .block-inner {
+                .content {
+                    text-align: center;
+                    .media-element-container {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        #region-footer-second {
+            .block-inner {
+                ul.menu {
+                    li {
+                        a {
+                            &.facebook {
+                                padding-left: 40px;
+                                background-image: url(../../images/icon_fb.png);
+                            }
+                            &.heureka {
+                                padding-left: 40px;
+                                background-image: url(../../images/icon_heureka.png);
+                            }
+                        }
+                        &.last {
+                            a {
+                                padding-left: 40px;
+                                background-image: url(../../images/icon_najduzbozi.png);
+                            }
+                        }
+                        @media (max-width: 640px) {
+                            a {
+                                &.facebook,
+                                &.heureka {
+                                    padding-left: 50px;
+                                }
+                            }
+                            &.last {
+                                a {
+                                    padding-left: 50px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #zone-footer2-wrapper {
+        background-color: #888888;
+        #zone-footer2 {
+            #region-footer2-first,
+            #region-footer2-second {
+                .block-inner {
+                    .content {
+                        a {
+                            color: #000;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+            #region-footer2-second {
+                text-align: right;
+            }
+            @media (max-width: 740px) {
+                #region-footer2-first,
+                #region-footer2-second {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+

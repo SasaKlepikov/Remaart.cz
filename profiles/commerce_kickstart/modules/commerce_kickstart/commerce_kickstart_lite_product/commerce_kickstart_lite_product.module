@@ -17,6 +17,10 @@ function commerce_kickstart_lite_product_migrate_api() {
       'CommerceKickstartNode' => array('class_name' => 'CommerceKickstartNode'),
       'CommerceKickstartObrazyVarianty' => array('class_name' => 'CommerceKickstartObrazyVarianty'),
       'CommerceKickstartObrazyNodes' => array('class_name' => 'CommerceKickstartObrazyNodes'),
+      'CommerceKickstartFototapetyVarianty' => array('class_name' => 'CommerceKickstartFototapetyVarianty'),
+      'CommerceKickstartFototapetyNodes' => array('class_name' => 'CommerceKickstartFototapetyNodes'),
+      'CommerceKickstartNabytekDoplnkyVarianty' => array('class_name' => 'CommerceKickstartNabytekDoplnkyVarianty'),
+      'CommerceKickstartNabytekDoplnkyNodes' => array('class_name' => 'CommerceKickstartNabytekDoplnkyNodes'),
     ),
   );
 }

@@ -19,9 +19,20 @@
         // We hide the comments and links now so that we can render them later.
         hide($content['comments']);
         hide($content['links']);
+        hide($content['product:field_description']);
+        hide($content['product:field_rozmery_dilu_obrazu']);
+        hide($content['field_original_image']);
         print render($content);
       ?>
     </div>
+  </div>
+  <div class="container-24 grid-24 clearfix">
+    <?php
+    $content['product:field_description']['#title'] = "hhh";
+    print render($content['product:field_description']);
+    print render($content['product:field_rozmery_dilu_obrazu']);
+    print render($content['field_original_image']);
+    ?>
   </div>
   <div class="container-24 grid-24 clearfix">
     <?php if (!empty($content['links'])): ?>

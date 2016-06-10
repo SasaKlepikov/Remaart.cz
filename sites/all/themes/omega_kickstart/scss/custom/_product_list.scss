@@ -1,0 +1,140 @@
+.view-collection-products {
+    .view-content {
+        .products-per-collection {
+            display: inline-block;
+            overflow: hidden;
+            clear: both;
+            text-align: left;
+        }
+        .views-row {
+            margin-left: 0.75em;
+            margin-right: 0.75em;
+            margin-bottom: 1.5em;
+            .views-field {
+                .content {
+                    width: 185px;
+                    .image-preview-wrapper {
+                        position: relative;
+                        padding-left: 5px;
+                        .extra-buttons-wrapper {
+                            position: absolute;
+                            top: 5px;
+                            left: 0px;
+                            .commerce-product-field {
+                                .field {
+                                    margin-bottom: 5px;
+                                    padding: 2px 5px;
+                                    display: inline-block;
+                                    color: #fff;
+                                    font-weight: 700;
+                                }
+                                &.commerce-product-field-field-tip-na-darek {
+                                    .field {
+                                        margin-bottom: 5px;
+                                        background-color: #1c65cf !important;
+                                    }
+                                }
+                                &.commerce-product-field-field-doporucujeme {
+                                    .field {
+                                        margin-bottom: 5px;
+                                        background-color: #e6952f !important;
+                                    }
+                                }
+                                &.commerce-product-field-field-sleva {
+                                    .field {
+                                        margin-bottom: 5px;
+                                        background-color: #830205 !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .other-wrapper {
+                        margin-left: 5px;
+                        width: 180px;
+                        header {
+                            background: none;
+                            padding-top: 0;
+                            h2 {
+                                height: auto;
+                                border-bottom: solid 1px #5294c1;
+                                margin-bottom: 8px;
+                                padding-bottom: 8px;
+                                margin-left: 0;
+                                margin-right: 0;
+                                font-size: 15px;
+                                line-height: 18px;
+                                a {
+                                    font-size: 15px;
+                                    line-height: 18px;
+                                }
+                            }
+                        }
+                        .commerce-product-field-field-bezna-cena {
+                            margin-bottom: 0;
+                            .field-name-field-bezna-cena {
+                                text-align: right;
+                                border-bottom: solid 1px #5294c1;
+                                margin-bottom: 8px;
+                                padding-bottom: 8px;
+                                color: #999;
+                                line-height: 14px;
+                                text-decoration: line-through;
+                                .field-label {
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+                        .product-list-line {
+                            text-align: right;
+                            line-height: 14px;
+                            border-bottom: solid 1px #5294c1;
+                            margin-bottom: 8px;
+                            padding-bottom: 8px;
+                            line-height: 18px;
+                            strong {
+                                font-size: 13px;
+                            }
+                            .commerce-product-field-commerce-price {
+                                font-size: 16px;
+                                line-height: 18px;
+                                display: inline-block;
+                                margin-bottom: 0;
+                                .field {
+                                    margin-bottom: 0;
+                                    .field-item {
+                                        color: #000;
+                                        font-weight: 700;
+                                        font-size: 16px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.views-row-fourth {
+                @media (min-width: 981px) {
+                    clear: both;
+                }
+                @media (min-width: 641px) and (max-width: 741px) {
+                    clear: both;
+                }
+            }
+            &.views-row-third {
+                @media (min-width: 740px) and (max-width: 980px) {
+                    clear: both;
+                }
+                @media (max-width: 640px) {
+                    clear: both;
+                }
+            }
+            @media (max-width: 430px) {
+                clear: both;
+            }
+        }
+        @media (max-width: 480px) {
+            text-align: center;
+        }
+    }
+}

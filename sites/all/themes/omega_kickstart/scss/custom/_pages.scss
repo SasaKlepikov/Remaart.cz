@@ -1,0 +1,53 @@
+#zone-content {
+    .view-collection-products, 
+    .view-collection-taxonomy-term {
+        .view-header {
+            min-height: 88px;
+            width: 100%;
+            .taxonomy-background {
+                img {
+                    display: block;
+                    border: 2px solid #3b3b3b;
+                    box-sizing: border-box;
+                }
+            }
+            .taxonomy-title {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 30px;
+                padding: 15px 20px;
+                background: rgb(51,51,51);
+                background: rgba(51,51,51,0.8);
+                font-size: 38px;
+                line-height: 1;
+                text-shadow: none;
+                font-weight: 500;
+            }
+            .view-collection-products, 
+            .collection-terms {
+                margin: 0;
+                padding-top: 0;
+            }
+            @media (max-width: 740px) {
+                .taxonomy-title {
+                    top: 20px;
+                    font-size: 34px;
+                }
+            }
+            @media (max-width: 640px) {
+                .taxonomy-title {
+                    top: 15px;
+                    font-size: 32px;
+                }
+            }            
+            @media (max-width: 480px) {
+                min-height: 75px;
+                .taxonomy-title {
+                    top: 10px;
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,307 @@
+#product-detail-page {
+    position: relative;
+    clear: both;
+    overflow: hidden;
+    #product-title {
+        .field-name-title-field {
+            border-bottom: solid 1px #5294c1;
+            margin-bottom: 0px;
+            padding-bottom: 5px;
+        }
+    }
+    #product-image {
+        padding-left: 0;
+        @media (max-width: 740px) {
+            text-align: center;
+            .commerce-product-field-field-images {
+                display: inline-block;
+            }
+        }
+    }
+    #product-info {
+        padding-left: 0;
+        float: right;
+        .commerce-product-field,
+        .commerce-product-extra-field {
+            .field,
+            .commerce-product-sku {
+                border-bottom: solid 1px #5294c1;
+                padding: 5px;
+                color: #000;
+            }
+            .field-label,
+            .commerce-product-sku-label {
+                color: #666;
+            }
+            &:hover {
+                background-color: #eee;
+                .field-label,
+                .commerce-product-sku-label {
+                    color: #000;
+                }
+            }
+        }
+        .commerce-product-extra-field {
+            .commerce-product-sku {
+                font-size: 14px;
+                font-weight: normal;
+                font-weight: 700;
+                color: #000;
+                .commerce-product-sku-label {
+                    font-weight: bold;
+                }
+            }
+        }
+        .typ-obrazu {
+            border-bottom: solid 1px #5294c1;
+            padding: 5px;
+            .commerce-product-field {
+                display: inline-block;
+                margin-right: 5px;
+                .field {
+                    border-bottom: none;
+                    margin-bottom: 0;
+                    padding: 0px;
+                }
+                &:hover {
+                    background-color: none  
+                }
+                &.commerce-product-field-field-s-hodinami {
+                    text-transform: lowercase;
+                }
+            }
+            &:hover {
+                background-color: #eee;
+                .commerce-product-field {
+                    .field-label {
+                        color: #000;
+                    }
+                }
+            }
+        }
+        .commerce-product-field-field-bezna-cena {
+            .field-items {
+                .field-item {
+                    text-decoration: line-through;
+                }
+            }
+        }
+        .commerce-product-field-commerce-price {
+            .field-name-commerce-price {
+                margin-bottom: 0;
+                font-size: 26px;
+            }
+        }
+        .field-type-commerce-product-reference {
+            border-bottom: solid 1px #5294c1;
+            margin-bottom: 5px;
+            padding-bottom: 5px;
+            padding-top: 5px;
+            background: none;
+            form.commerce-add-to-cart {
+                padding-bottom: 5px;
+                padding-top: 5px;
+                overflow: hidden;
+                clear: both;
+                background: none;
+                .form-item {
+                    padding-bottom: 0;
+                    width: 48%;
+                    margin-right: 2%;
+                    float: left;
+                    label {
+                        display: none;
+                    }
+                    input.form-text {
+                        border-color: #999;
+                        -webkit-border-top-left-radius: 4px;
+                        -webkit-border-bottom-left-radius: 4px;
+                        -moz-border-radius-topleft: 4px;
+                        -moz-border-radius-bottomleft: 4px;
+                        border-top-left-radius: 4px;
+                        border-bottom-left-radius: 4px;
+                    }
+                    span.ui-spinner {
+                        .ui-spinner-buttons {
+                            .ui-state-default {
+                                border-color: #999;
+                            }
+                        }
+                    }
+                }
+                .attribute-widgets {
+                    clear: both;
+                    margin-bottom: 5px;
+                    overflow: hidden;
+                    .form-item {
+                        margin-bottom: 5px;
+                        margin-right: 0;
+                        width: 48%;
+                        select {
+                            border-color: #999;
+                            -webkit-border-radius: 4px;
+                            -moz-border-radius: 4px;
+                            border-radius: 4px;
+                        }
+                        &.form-item-attributes-field-s-hodinami {
+                            clear: both;
+                            margin-right: 4%;
+                        }
+                        &.form-item-attributes-field-typ-obrazu {
+                            clear: both;
+                            margin-right: 4%;
+                        }
+                    }
+                }
+                input.form-submit {
+                    margin-left: 0;
+                    margin-top: 0;
+                    float: right;
+                    -webkit-border-radius: 4px;
+                    -moz-border-radius: 4px;
+                    border-radius: 4px;
+                    background-position: 95% 50%;
+                    padding-right: 45px;
+                    padding-top: 6px;
+                    padding-bottom: 6px;
+                }
+            }
+        }
+        #extra-buttons {
+            text-align: center;
+            .commerce-product-field-field-tip-na-darek,
+            .commerce-product-field-field-doporucujeme,
+            .commerce-product-field-field-sleva {
+                display: inline-block;
+                margin: 2px 5px 2px 0;
+                .field {
+                    display: block;
+                    color: #fff;
+                    border-bottom: none;
+                    padding: 5px 10px;
+                    -webkit-border-radius: 4px;
+                    -moz-border-radius: 4px;
+                    border-radius: 4px;
+                    font-weight: 700;
+                }
+            }
+            .commerce-product-field-field-tip-na-darek {
+                .field {
+                    background-color: #1c65cf !important;
+                }
+            }
+            .commerce-product-field-field-doporucujeme {
+                .field {
+                    background-color: #e6952f !important;
+                }
+            }
+            .commerce-product-field-field-sleva {
+                .field {
+                    background-color: #830205 !important;
+                }
+            }
+        }
+        @media (max-width: 740px) {
+            display: block;
+            float: none;
+            clear: both;
+        }
+    }
+    #product-other-info {
+        clear: both;
+        overflow: hidden;
+        border-bottom: solid 1px #5294c1;
+        margin-top: 25px;
+        margin-bottom: 10px;
+        #quicktabs-product_detail_tabs_info {
+            .item-list {
+                ul.quicktabs-tabs.quicktabs-style-nostyle {
+                    padding-left: 0;
+                    margin-bottom: 20px;
+                    text-align: center;
+                    border-bottom: solid 1px #5294c1;
+                    li {
+                        -webkit-border-top-left-radius: 4px;
+                        -webkit-border-top-right-radius: 4px;
+                        -moz-border-radius-topleft: 4px;
+                        -moz-border-radius-topright: 4px;
+                        border-top-left-radius: 4px;
+                        border-top-right-radius: 4px;
+                        margin: 0 2px;
+                        padding: 5px 10px;
+                        border: solid 1px #5294c1;
+                        border-bottom-width: 0;
+                        display: inline-block;
+                        font-weight: bold;
+                        color: #666;
+                        a {
+                            color: #666;
+                            &.active {
+                                color: #666;
+                            }
+                        }
+                        &:hover,
+                            &.active {
+                            color: #000;
+                            background-color: #eee;
+                            a {
+                                color: #000;
+                                &.active {
+                                    color: #000;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .field-name-field-rozmery-dilu-obrazu {
+            .vocabulary-rozmery-jednotlivych-dilu-obrazu {
+                h2 {
+                    display: none;
+                }
+                .content {
+                    text-align: center;
+                    h2 {
+                        display: block;
+                    }
+                    .field-name-field-nahled {
+                        text-align: center;
+                        display: block;
+                        .field-items {
+                            text-align: left;
+                            display: inline-block;
+                            &:hover {
+                                background-color: #eee;
+                            }
+                        }
+                    }
+                    .taxonomy-term-description {
+                        margin-bottom: 0;
+                        margin-top: 0;
+                        text-align: left;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        .commerce-product-field-field-nahledy {
+            margin-bottom: 10px;
+            .field-items {
+                text-align: center;
+                .field-item {
+                    display: inline-block;
+                    margin: 0 5px 10px;
+                }
+            }
+        }
+        .view-podklady-k-obrazu {
+            .view-content {
+                overflow: auto;
+                table {
+                    min-width: 100%;
+                }
+            }
+        }
+    }
+}
